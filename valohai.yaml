@@ -1,0 +1,14 @@
+- step:
+    name: fetch_training_data
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python get_training_features.py
+- step:
+    name: fetch_online_data
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python get_online_features.py
+
+ 
