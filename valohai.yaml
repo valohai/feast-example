@@ -1,0 +1,32 @@
+- step:
+    name: fetch (training)
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python get_training_features.py
+- step:
+    name: fetch (online)
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python get_online_features.py
+- step:
+    name: materialize
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python materialize_online_store.py
+- step:
+    name: apply
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - cd feast_repository && feast apply
+- step:
+    name: initialize
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python upload_example_raw_data.py
+
+ 

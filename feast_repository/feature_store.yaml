@@ -1,0 +1,28 @@
+project: valohai_example
+provider: local
+registry:
+    registry_store_type: PostgreSQLRegistryStore
+    path: feast_registry
+    host: ${FEAST_POSTGRES_HOSTNAME}
+    port: 5432
+    database: postgres
+    db_schema: public
+    user: ${FEAST_POSTGRES_USERNAME}
+    password: ${FEAST_POSTGRES_PASSWORD}
+online_store:
+    type: postgres
+    host: ${FEAST_POSTGRES_HOSTNAME}
+    port: 5432
+    database: postgres
+    db_schema: public
+    user: ${FEAST_POSTGRES_USERNAME}
+    password: ${FEAST_POSTGRES_PASSWORD}
+offline_store:
+    type: postgres
+    host: ${FEAST_POSTGRES_HOSTNAME}
+    port: 5432
+    database: postgres
+    db_schema: public
+    user: ${FEAST_POSTGRES_USERNAME}
+    password: ${FEAST_POSTGRES_PASSWORD}
+entity_key_serialization_version: 2
