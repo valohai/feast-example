@@ -46,3 +46,4 @@ df_to_postgres_table(
     table_name="feast_driver_hourly_stats",
 )
 
+print("Database table feast_driver_hourly_stats created or replaced")
