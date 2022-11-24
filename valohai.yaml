@@ -23,7 +23,7 @@
     - pip install -r requirements.txt
     - cd feast_repository && feast apply
 - step:
-    name: initialize example data
+    name: initialize
     image: python:3.9
     command:
     - pip install -r requirements.txt
