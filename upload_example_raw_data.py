@@ -14,12 +14,12 @@ start_date = end_date - timedelta(days=15)
 driver_entities = [1001, 1002, 1003, 1004, 1005]
 driver_df = create_driver_hourly_stats_df(driver_entities, start_date, end_date)
 
-postgres_host = os.environ("FEAST_POSTGRES_HOSTNAME")
+postgres_host = os.environ["FEAST_POSTGRES_HOSTNAME"]
 postgres_port = "5432"
 postgres_database = "postgres"
 postgres_schema = "public"
-postgres_user = os.environ("FEAST_POSTGRES_USERNAME")
-postgres_password = os.environ("FEAST_POSTGRES_PASSWORD")
+postgres_user = os.environ["FEAST_POSTGRES_USERNAME"]
+postgres_password = os.environ["FEAST_POSTGRES_PASSWORD"]
 
 db_connection = psycopg2.connect(
     dbname=postgres_database,
