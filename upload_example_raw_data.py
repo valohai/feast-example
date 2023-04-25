@@ -16,7 +16,7 @@ driver_df = create_driver_hourly_stats_df(driver_entities, start_date, end_date)
 
 postgres_host = os.environ["FEAST_POSTGRES_HOSTNAME"]
 postgres_port = "5432"
-postgres_database = "postgres"
+postgres_database = os.environ["FEAST_POSTGRES_DATABASE"]
 postgres_schema = "public"
 postgres_user = os.environ["FEAST_POSTGRES_USERNAME"]
 postgres_password = os.environ["FEAST_POSTGRES_PASSWORD"]
