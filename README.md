@@ -47,5 +47,6 @@ Valohai steps available:
 - `FEAST_POSTGRES_HOSTNAME`
 - `FEAST_POSTGRES_USERNAME`
 - `FEAST_POSTGRES_PASSWORD`
+- `FEAST_POSTGRES_DATABASE`
 3. Execute the `initialize` step in Valohai. It uploads the raw example data into a database table `feast_driver_hourly_stats`.
 4. Execute the `apply` step in Valohai. It uploads all the feature definitions into the database.
