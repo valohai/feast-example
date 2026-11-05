@@ -1,1 +1,1 @@
-feast[postgres]==0.26.0
+feast[postgres]==0.67.0
